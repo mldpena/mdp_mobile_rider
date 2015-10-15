@@ -41,8 +41,9 @@ class Waybill_Model extends CI_Model {
 											H.`show` = 1 AND 
 											H.`frombranchid` = ? AND
 											H.`riderid` = ? AND
-											H.`tobranchid` = 0
-											DATE(H.`datetimedeliver`) = ?";
+											H.`tobranchid` = 0 AND
+											DATE(H.`datetimedeliver`) = ?
+										ORDER BY W.`status` ASC";
 
 		$resultSet = $this->db->query($getDispatchWaybillTodayQuery, [$this->_currentBranchId, $this->_currentRiderId, $this->_currentDate]);
 

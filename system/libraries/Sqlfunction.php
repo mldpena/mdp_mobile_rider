@@ -10,8 +10,8 @@ class CI_Sqlfunction{
 		$ci->load->library('myfunction');
 		$ci->load->library('encrypt');
 
-		$ci->_currentBranchId 	= isset($_COOKIE['branch']) ? $ci->encrypt->decode($ci->myfunction->getCookie('branch')) : 0;
-		$ci->_currentUserId 	= isset($_COOKIE['temp']) ? $ci->encrypt->decode($ci->myfunction->getCookie('temp')) : 0;
+		$ci->_currentBranchId 	= isset($_COOKIE['rider_branch']) ? $ci->encrypt->decode($ci->myfunction->getCookie('rider_branch')) : 0;
+		$ci->_currentUserId 	= isset($_COOKIE['rider_temp']) ? $ci->encrypt->decode($ci->myfunction->getCookie('rider_temp')) : 0;
 		$ci->_currentDate 		= date('Y-m-d H:i:s');
 	}
 
