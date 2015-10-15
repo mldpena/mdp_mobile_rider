@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<sms_from>Jaca Express</sms_from>
+	<sms_message>Good Day &lt;consigneename&gt;! We would like to inform you that your item is currently being delivered as of the moment. Thank you and Good Day!</sms_message>
+	<sms_api_url>http://api.semaphore.co/api/sms</sms_api_url>
+	<sms_api_key>dgsMQ8q77hewW766aqxK</sms_api_key>
+</configuration>

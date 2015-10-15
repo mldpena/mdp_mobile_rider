@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<email_setup>
+		<protocol>smtp</protocol>
+		<smtp_host>ssl://smtp.googlemail.com</smtp_host>
+		<smtp_port>465</smtp_port>
+		<smtp_user>marklawrencepena@gmail.com</smtp_user>
+		<smtp_pass>Ml09192929</smtp_pass>
+		<mailtype>html</mailtype>
+		<smtp_timeout>200</smtp_timeout>
+		<starttls>true</starttls>
+		<newline>\r\n</newline>
+	</email_setup>
+	<email_shipper_setup>
+		<title>Billing Statement</title>
+		<subject>Billing Statementsss</subject>
+		<message>Please see attched file belowssss</message>
+	</email_shipper_setup>
+	<email_shipper_setup>
+		<title>Statement of Account</title>
+		<subject>Statement of Accountsss</subject>
+		<message>Please see attched file belowsss</message>
+	</email_shipper_setup>
+</configuration>

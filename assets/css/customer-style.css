@@ -1,0 +1,167 @@
+@font-face{
+	font-family: lsansuni;
+	src: url(../fonts/lsansuni.ttf);
+}
+@font-face{
+	font-family: Exo-Regular;
+	src: url(../fonts/Exo-Regular.otf);
+}
+@font-face{
+	font-family: Lato-Regular;
+	src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face{
+	font-family: Lato-Bold;
+	src: url(../fonts/Lato-Bold.ttf);
+}
+body{
+	background: url("../img/jaca-bg.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container{
+	width: 980px;
+}
+.main-body{
+	border-top: 10px #EE84E9 solid;
+	border-bottom: 10px #EE84E9 solid;
+	background: #fff;
+	float: left;
+	font-family: lsansuni;
+	border-radius: 10px;
+}
+.header-panel{
+	width: 63%;
+	float: right;
+	position: relative;
+	margin-right: -30px;
+	font-family: Exo-Regular;
+	font-size: 29px;
+	color: #DD08D2;
+	margin-top: 26px;
+}
+.follow-links{
+	height: 50px;
+}
+.main-logo{
+	width: 360px;
+	border-top: 10px #EE84E9 solid;
+	border-bottom: 5px #FF00FF solid;
+	background: #fff;
+	height: 120px;
+	position: relative;
+	top: -30px;
+	float: left;
+	border-radius: 10px;
+}
+.main-logo img{
+	width: 339px;
+	height: 86px;
+	margin-left: 11px;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.header-divide{
+	background: #EE84E9;
+	float: left;
+	padding: 10px 15px;
+	border-bottom: 3px #d673d1 solid;
+	width: 100%;
+	color: #fff;
+	font-family: Lato-Bold;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.content-split{
+	float: left;
+	width: 100%;
+}
+footer{
+	margin-top: 15px;
+}
+.footer-block{
+	height: 20px;
+	width: 100%;
+	background: #FB80EE;
+	border-bottom: 3px #EB48DA solid;
+}
+.main-footer{
+	height: 224px;
+	background-color: #F84CE6;
+	color: black;
+	font-family: lsansuni;
+	font-size: 12px;
+	padding-top: 15px;
+}
+.search-panel{
+	width: 100%;
+}
+.width-adjust{
+	width: 60%;
+}
+.search-btn{
+	background: #9B0791;
+	border: 1px #9B0791 solid;
+}
+.search-btn a{
+	color: white;
+}
+
+.stat{
+	width: 147px;
+	text-align: center;
+	color: #fff;
+	font-size: 75%;
+	font-family: Lato-Bold;
+	padding: 0.2em 0.6em 0.3em;
+	border-radius: 0.25em;
+	margin: 0 auto;
+}
+.stat-received{
+	background: #18BC9C;
+}
+.stat-segregated{
+	background: #3498db;
+}
+.stat-ondelivery{
+	background: #033966;
+}
+.stat-receivedbyconsignee{
+	background: #06A523;
+}
+.stat-withproblem{
+	background: #e74c3c;
+}
+.stat-pulloutbyshipper{
+	background: #B2109A;
+}
+.stat-onhold{
+	background: #f39c12;
+}
+.stat-pullout{
+ background: #095054;
+}
+.stat-priority{
+ background: #841c0a;
+}
+.stat-pulloutreplacement{
+ background: #729b14;
+}
+.alert-m{
+	margin-top: 15px;
+	width: 100%;
+	border-radius: 4px;
+	padding: 15px;
+	height: 50px;
+}
+.tddisplay{
+	text-align: left !important;
+	width: 520px;
+}
+#loadingimg{
+	height: 100px;
+	width: 100px;
+	margin-top: 15px;
+}
