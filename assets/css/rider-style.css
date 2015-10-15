@@ -24,6 +24,12 @@
 	}
 }
 @media (max-width: 568px){
+	.alert{
+		font-size: 12px;
+		text-align: center;
+		font-family: Roboto-Bold;
+		text-transform: uppercase;
+	}
 	.view-message{
 		display: none;
 	}
@@ -105,35 +111,42 @@
 		cursor: pointer;
 	}
 	.each-field{
-		width: 37%;
+		width: 47%;
 		float: left;
 		text-align: left;
 		margin-top: 15px;
 	}
 	.each-field.status{
-		margin-left: 15px;
+		float: right;
+		text-align: center;
 	}
 	.dispatch-save{
-		float: right;
 		text-align: right;
 		position: absolute;
-		bottom: 10px;
+		top: -15px;
 		right: 10px;
 	}
+	.dispatch-save .btn{
+		padding: 6px 8px;
+	}
 	.field-data{
-		font-size: 18px;
+		font-size: 1.5vg;
 		font-family: Roboto-Bold;
+	}
+	.spn-remarks{
+		font-size: 12px;
+		word-break:	break-all;
 	}
 }
 
 /*Button Colors*/
 .btn-success{
-	background: #18BC9C;
-	border-color: #18bc9c;
+	background: #128f76;
+	border-color: #0e7762;
 }
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success{
-	background: #128f76;
-	border-color: #11866f;
+	background: #0e7762;
+	border-color: #0e7762;
 }
 .btn-primary{
 	background: #ad1da6;
@@ -145,7 +158,6 @@
 }
 
 .stat{
-	width: 147px;
 	text-align: center;
 	color: #fff;
 	font-size: 75%;

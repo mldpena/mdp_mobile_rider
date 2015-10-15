@@ -77,9 +77,14 @@
 		{
 			htmlContent += '<div class="single-tab">' + 
 								'<a href="#" class="modal-pop-up"><div class="waybill-no">#' + dataSet[i].waybill + '</div></a>' +
+								'<div class="dispatch-save">' +
+								'	<button class="btn btn-primary edit-action"><i class="fa fa-edit fa-lg"></i></button>' +
+								'	<button class="btn btn-danger cancel-action hide-element"><i class="fa fa-close fa-lg"></i></button>' +
+								'	<button class="btn btn-success save-action hide-element"><i class="fa fa-save fa-lg"></i></button>' +
+								'</div>' +
 								'<div class="each-field">' +
 								'	Remarks:' +
-								'	<span class="spn-remarks">' + dataSet[i].remarks + '</span>' +
+								'	<div class="spn-remarks">' + dataSet[i].remarks + '</div>' +
 								'	<input type="text" class="text-remarks form-control" value="' + dataSet[i].remarks + '">' +
 								'</div>' +
 								'<div class="each-field status">' +
@@ -92,11 +97,6 @@
 								'<input type="hidden" class="address" value="' + dataSet[i].address + '">' +
 								'<input type="hidden" class="waybill-id" value="' + dataSet[i].waybill_id + '">' +
 								'<input type="hidden" class="description" value="' + dataSet[i].description + '">' +
-								'<div class="dispatch-save">' +
-								'	<button class="btn btn-primary edit-action">Edit</button>' +
-								'	<button class="btn btn-danger cancel-action hide-element">Cancel</button>' +
-								'	<button class="btn btn-success save-action hide-element">Save</button>' +
-								'</div>' +
 							'</div>';
 		};
 
