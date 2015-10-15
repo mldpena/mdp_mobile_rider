@@ -1,11 +1,18 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CI_Sqlfunction{
+	private $_currentUserId = 0;
+	private $_currentBranchId = 0;
+	private $_currentDate = '';
 
 	public function __construct() {
 		$ci =& get_instance();
 		$ci->load->library('myfunction');
 		$ci->load->library('encrypt');
+
+		$ci->_currentBranchId 	= isset($_COOKIE['branch']) ? $ci->encrypt->decode($ci->myfunction->getCookie('branch')) : 0;
+		$ci->_currentUserId 	= isset($_COOKIE['temp']) ? $ci->encrypt->decode($ci->myfunction->getCookie('temp')) : 0;
+		$ci->_currentDate 		= date('Y-m-d H:i:s');
 	}
 
 	public function exeQuery($query,$dataArray)
@@ -385,5 +392,30 @@ class CI_Sqlfunction{
 		
 		$result->free_result();
 		return $email;
+	}
+
+	public function logUserAction($waybillId, $actionDescription)
+	{
+		$ci =& get_instance();
+
+		$logUserActionQuery = "INSERT INTO `audit_trail`
+								(`userid`,
+								`waybillid`,
+								`branchid`,
+								`message`,
+								`actiondate`)
+								VALUES
+								(?,?,?,?,?);";
+
+		$returnData = $this->exeQuery($logUserActionQuery,	[
+																$ci->_currentUserId, 
+																$waybillId,
+																$ci->_currentBranchId, 
+																$actionDescription, 
+																$ci->_currentDate
+															]);
+
+		if (!$returnData['error']) 
+			$data['error'] = 'Unable to save data!';
 	}
 }

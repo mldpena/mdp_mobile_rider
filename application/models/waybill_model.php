@@ -41,6 +41,7 @@ class Waybill_Model extends CI_Model {
 											H.`show` = 1 AND 
 											H.`frombranchid` = ? AND
 											H.`riderid` = ? AND
+											H.`tobranchid` = 0
 											DATE(H.`datetimedeliver`) = ?";
 
 		$resultSet = $this->db->query($getDispatchWaybillTodayQuery, [$this->_currentBranchId, $this->_currentRiderId, $this->_currentDate]);
@@ -96,6 +97,8 @@ class Waybill_Model extends CI_Model {
 																				$this->_currentRiderId, 
 																				$this->_currentDateTime
 																			]);
+
+		$this->sqlfunction->logUserAction($waybill_id, 'Updated waybill status using mobile system.');
 
 		if ($returnResult['error'])
 			$response['error'] = 'Unable to save data!';
